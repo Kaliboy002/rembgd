@@ -6,7 +6,7 @@ from PIL import Image, ImageOps
 segformer_b2_clothes_pipe = pipeline("image-segmentation", model="mattmdjaga/segformer_b2_clothes")
 
 def segformer_b2_clothes(img):
-    result = segmentation_pipe(img)
+    result = segformer_b2_clothes_pipe(img)
     mask = result[0]['mask'].convert('L')
     mask = ImageOps.invert(mask)
     img.putalpha(mask)
