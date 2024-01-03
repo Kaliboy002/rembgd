@@ -14,8 +14,8 @@ def segformer_b2_clothes(img):
 
 def remove_background(img):
     segformer_b2_clothes_result = segformer_b2_clothes(img)
-
-	return segformer_b2_clothes_result
+    
+    return segformer_b2_clothes_result
 
 iface = gr.Interface(fn=remove_background, 
                      inputs=gr.Image(type='pil'), 
