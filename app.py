@@ -22,7 +22,7 @@ def remove_background(img):
     start = time.time()
     segformer_b2_clothes_result = segformer_b2_clothes(img)
     end = time.time()
-    segformer_b2_clothes_text = "[mattmdjaga/segformer_b2_clothes](https://huggingface.co/mattmdjaga/segformer_b2_clothes) \n" + str(end-start) + " seconds"
+    segformer_b2_clothes_text = """[mattmdjaga/segformer_b2_clothes](https://huggingface.co/mattmdjaga/segformer_b2_clothes) \n""" + str(end-start) + """ seconds"""
 
     #rembg
     start = time.time()
