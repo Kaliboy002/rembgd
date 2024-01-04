@@ -1,7 +1,7 @@
 ---
 title: Remove Background Comparison
-emoji: 🏢
-colorFrom: blue
+emoji: 🧍🏼‍♀️
+colorFrom: gray
 colorTo: gray
 sdk: gradio
 sdk_version: 3.50.2
