@@ -32,7 +32,12 @@ def remove_background(img):
     
     return segformer_b2_clothes_text, segformer_b2_clothes_result, rembg_text, rembg_result 
 
-iface = gr.Interface(fn=remove_background, 
+iface = gr.Interface(fn=remove_background,
+                     title='Remove Background Comparison',
+                     description="""
+                     Compares [mattmdjaga/segformer_b2_clothes](https://huggingface.co/mattmdjaga/segformer_b2_clothes) and [rembg](https://huggingface.co/spaces/openskyml/remove-background-on-image) background removal.
+                     """,
+                     theme = gr.themes.Base(primary_hue="teal",secondary_hue="teal",neutral_hue="slate"),
                      inputs=gr.Image(type='pil'), 
                      outputs=[gr.Markdown(),
                               gr.Image(label='segformer_b2_clothes', type='pil'),
